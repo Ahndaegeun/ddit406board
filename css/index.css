@@ -1,0 +1,120 @@
+@import url(../util/reset.css);
+
+.body__container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(214, 214, 214);
+}
+
+
+
+.board-list {
+  width: 720px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.board-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.card {
+  width: 640px;
+  background: #fff;
+  position: relative;
+  padding: 30px 50px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.user-img {
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.write-date {
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.content {
+  line-height: 1.4;
+}
+
+.card-btn {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.comment-list {
+  height: 0;
+  overflow: hidden;
+}
+
+.show {
+  height: 100%;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.description {
+  width: 85%;
+}
+
+.comment-author {
+
+}
+
+.insert-comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-text-area {
+  resize: none;
+  width: 85%;
+  padding: 10px;
+}
+
+.insert-comment-btn {
+  border: 1px solid #000;
+  padding: 16px 10px;
+  border-radius: 5px;
+}

@@ -1,0 +1,53 @@
+@import url(../util/reset.css);
+
+.body__container {
+  height: 100vh;
+  background: rgb(209, 209, 209);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
+section {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 34px;
+}
+
+form {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(194, 194, 194);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgb(102, 102, 102);
+}
+
+input {
+  width: 100%;
+  padding: 10px 5px;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+}

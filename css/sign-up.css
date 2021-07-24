@@ -1,0 +1,118 @@
+@import url(../util/reset.css);
+/* Common */
+button, [type=button] {
+  outline: none;
+  border: none;
+  font-size: 24px;
+  background: #7bd3f7;
+  color: #fff;
+  cursor: pointer;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Main */
+.body__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+h1 {
+  font-size: 42px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sign-up-frm {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+}
+
+label {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+[class $= 'wranning'] {
+  margin-bottom: 20px;
+}
+
+.frm-input {
+  margin-bottom: 15px;
+  padding: 10px 5px;
+  font-size: 24px;
+  background: none;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #999;
+}
+
+.frm-input:active {
+  outline: none;
+}
+
+[disabled] {
+  cursor: default;
+  background: #999;
+}
+
+#user-id {
+  margin: 0;
+  width: 80%;
+}
+
+.id-wrapper {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.email-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+#user-email {
+  width: 75%;
+  margin: 0;
+}
+
+.email-btn {
+  width: 45%;
+}
+
+.send-lisence {
+  width: 20%;
+  font-size: 16px;
+}
+
+.lisence {
+  margin: 0;
+  width: 50%;
+}
+
+.frm-submit-btn {
+  padding: 10px 0;
+}
+
+footer {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background: #fff;
+}
+
+footer p {
+  font-size: 20px;
+  color: #999;
+}
