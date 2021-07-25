@@ -6,32 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>아이디, 비밀번호 찾기</title>
   <link rel="stylesheet" href="../css/find.css">
+  <script src="../js/find.js" defer></script>
 </head>
 <body>
 <div class="body__container">
+  <div class="inner">
+    <h1>ID 찾기 / PW 초기화</h1>
+    <div class="form-wrapper">
+      <div class="btn-group">
+        <button class="id-btn select-btn">아이디</button>
+        <button class="pw-btn">비밀번호</button>
+      </div>
 
-  <section class="find-id">
-    <h2>아이디 찾기</h2>
-    <form class="id-frm" action="">
-      <input class="user-name" type="text" placeholder="이름" name="user-name">
-      <input class="user-regno" type="text" placeholder="주민번호" name="user-regno">
-      <div class="user-id-text">아이디 출력</div>
-      <button class="id-btn" type="button">아이디 찾기</button>
-    </form>
-  </section>
+      <form class="id-frm show" action="">
+        <label for="user-name">이름</label>
+        <input id="user-name" type="text">
+        <label for="user-pw">주민번호 앞자리</label>
+        <input id="user-regno" type="text">
+        <button class="search-id-btn" type="button">아이디 찾기</button>
+      </form>
+      
+      <form class="pw-frm" action="">
+        <label for="user-id">아이디</label>
+        <input id="user-id" type="text">
+        <label for="">이름</label>
+        <input id="user-name" type="text">
+        <label for="user-pw">주민번호 앞자리</label>
+        <input id="user-regno" type="text">
+        <button class="reset-pw-btn" type="button">비밀번호 찾기</button>  
+      </form>
+    </div>
 
-  <section class="reset-pw">
-    <h2>비밀번호 초기화</h2>
-    <form class="pw-frm" action="">
-      <input class="user-regno" type="text" placeholder="아이디" name="user-id">
-      <input class="user-name" type="text" placeholder="이름" name="user-name">
-      <input class="user-regno" type="text" placeholder="주민번호" name="user-regno">
-      <div class="user-pw-text">가입하실때 입력하신 이메일로 임시 비밀번호가 전송됩니다.</div>
-      <div class="user-email">가입하실때 입력하신 이메일은 <span>????</span> 입니다.</div>
-      <button class="id-btn" type="button">비밀번호 초기화</button>
-    </form>
-  </section>
-
+  </div>
 </div>
 </body>
 </html>

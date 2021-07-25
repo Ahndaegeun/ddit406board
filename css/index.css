@@ -1,14 +1,135 @@
 @import url(../util/reset.css);
 
-.body__container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(214, 214, 214);
+i {
+  margin-right: 5px;
 }
 
+.body__container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #fff;
+}
 
+.user-info {
+  justify-self: center;
+  margin-top: 100px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #7bd3f7;
+  height: fit-content;
+  padding: 20px 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #7bd4f788;
+}
+
+.user-info-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.user-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.user-modify-btn {
+  outline: none;
+  border: none;
+  font-size: 18px;
+  background: #7bd3f7;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.user-modify-btn:hover {
+  background: #52ceff;
+}
+
+.user-modify-info {
+  display: none;
+  flex-direction: column;
+}
+
+.show-modify {
+  display: flex;
+}
+
+.user-modify-info li {
+  margin-bottom: 10px;
+}
+
+.user-modify-info li:last-child {
+  margin: 0;
+}
+
+.modify-title {
+  margin-bottom: 10px;
+}
+
+.file-wrapper {
+  position: relative;
+}
+
+.user-img-btn {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.user-img-btn {
+  outline: none;
+  border: none;
+  background: #7bd3f7;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.user-img-btn:hover {
+  background: #7bd4f788;
+}
+
+.change-title {
+  margin-bottom: 10px;
+}
+
+.modify-pw-frm {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+[type = password] {
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+
+.modify-pw-btn {
+  outline: none;
+  border: none;
+  background: #7bd3f7;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modify-pw-btn:hover {
+  background: #52ceff;
+}
+
+main {
+  padding: 40px 0;
+}
 
 .board-list {
   width: 720px;
@@ -25,13 +146,75 @@
   display: none; /* Chrome, Safari, Opera*/
 }
 
-.card {
+.write-contents {
+  border: 1px solid #52ceff;
   width: 640px;
-  background: #fff;
+  height: fit-content;
+  padding: 30px 50px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 5px #7bd4f788;
+}
+
+.write-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.upload-img-wrap {
+  margin-bottom: 10px;
+}
+
+#upload-img {
+  width: 80%;
+}
+
+#anonymity {
+  text-align: right;
+}
+
+.upload-img-wrap label {
+  margin-right: 5px;
+}
+
+#write-contents-frm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.user-textarea {
+  width: 100%;
+  resize: none;
+  margin: 0 10px 0 0;
+  padding: 10px 5px;
+}
+
+.write-btn {
+  width: 100px;
+  height: fit-content;
+  outline: none;
+  border: none;
+  background: #7bd3f7;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px 0;
+}
+
+.write-btn:hover {
+  background: #52ceff;
+}
+
+.card {
+  height: fit-content;
+  width: 640px;
   position: relative;
   padding: 30px 50px;
   border-radius: 10px;
   margin-bottom: 20px;
+  border: 1px solid #7bd3f7;
+  box-shadow: 3px 3px 5px #7bd4f788;
 }
 
 .user-img {
@@ -80,7 +263,7 @@
 }
 
 .show {
-  height: 100%;
+  height: fit-content;
 }
 
 .comment {
@@ -94,27 +277,44 @@
 }
 
 .description {
-  width: 85%;
+  width: 100%;
+  line-height: 1.5;
 }
 
 .comment-author {
+  color: #52ceff;
+}
 
+.comment-menu {
+  width: 80px;
 }
 
 .insert-comment {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr .5fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  "ta ta ck"
+  "ta ta btn";
+  height: 70px;
+  column-gap: 10px;
 }
 
 .comment-text-area {
   resize: none;
-  width: 85%;
+  width: 100%;
   padding: 10px;
+  grid-area: ta;
+}
+
+.btn-check-wrap {
+  grid-area: ck;
+  justify-self: center;
 }
 
 .insert-comment-btn {
   border: 1px solid #000;
   padding: 16px 10px;
   border-radius: 5px;
+  grid-area: btn;
 }

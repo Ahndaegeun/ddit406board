@@ -11,49 +11,52 @@
 </head>
 <body>
 <div class="body__container">
-  <nav>
-    <ul>
-      <li>내 정보 확인</li>
-      <li>내 게시글 확인</li>
-      <li>내 댓글 확인</li>
-      <li>비밀번호 변경</li>
-      <li>좋아요, 싫어요 갯수</li>
-      <li>피드</li>
+  <div class="user-info">
+    <img class="user-info-img" src="http://placeimg.com/100/100/people" alt="user-img">
+    <div class="user-name">안대근</div>
+    <button class="user-modify-btn">내 정보 수정</button>
+    <ul class="user-modify-info">
+      <li class="user-id">아이디 : <span>adg0807</span></li>
+      <li class="user-email">이메일 : <span>adg0807@naver.com</span></li>
+      <li class="count-contents">내가 작성한 글 : <span>13</span></li>
+      <li class="count-comment">내가 작성한 댓글 : <span>10</span></li>
+      <li class="count-like">내가 받은 좋아요 : <span>32</span></li>
+      <li class="count-hate">내가 받은 싫어요 : <span>23</span></li>
+      <li><hr></li>
+      <li class="user-img-modify">
+        <form class="modify-img-frm" action="">
+          <div class="modify-title">프로필 이미지 변경</div>
+          <div class="file-wrapper">
+            <input class="user-img-file" type="file">
+            <button class="user-img-btn">변경</button>
+          </div>
+        </form>
+      </li>
+      <li><hr></li>
+      <li>
+        <div class="change-title">비밀번호 변경</div>
+        <form class="modify-pw-frm" action="">
+          <input type="password" autocomplete="false">
+          <button class="modify-pw-btn">비밀번호 변경</button>
+        </form>
+        <div class="pw-text">8~20자 사이 영어 대소문자, 특수문자 포함</div>
+      </li>
     </ul>
-  </nav>
+  </div>
   <main>
     <ul class="board-list">
-      <li class="card">
-        <img class="user-img" src="http://placeimg.com/100/100/people" alt="people">
-        <div class="wrapper">
-          <div class="author">작성자</div>
-          <div class="title">제목</div>
-          <div class="write-date">2021-07-12 / 12:42</div>
-          <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint a inventore distinctio vel excepturi magnam eveniet recusandae suscipit nobis, dolor ipsum modi quos soluta.</p>
+      <li class="write-contents">
+        <div class="write-title">글쓰기</div>
+        <div class="upload-img-wrap">
+          <label for="upload-ing"><i class="fa fa-file-image-o"></i></label>
+          <input id="upload-img" type="file" form="write-contents-frm">
+          <label for="anonymity">익명</label>
+          <input type="checkbox" id="anonymity" form="write-contents-frm">
         </div>
-        <div class="card-btn">
-          <button class="like-btn"><i class="fa fa-thumbs-o-up"></i>좋아요</button>
-          <button class="like-btn"><i class="fa fa-thumbs-o-down"></i>싫어요</button>
-          <button class="comment-btn"><i class="fa fa-commenting-o"></i>24</button>
-        </div>
-        <ul class="comment-list">
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="insert-comment">
-            <textarea class="comment-text-area"></textarea>
-            <button class="insert-comment-btn">댓글 등록</button>
-          </li>
-        </ul>
+        <form id="write-contents-frm" action="">
+          <textarea class="user-textarea"></textarea>
+          <button class="write-btn">작성</button>
+        </form>
       </li>
       <li class="card">
         <img class="user-img" src="http://placeimg.com/100/100/people" alt="people">
@@ -65,121 +68,26 @@
         </div>
         <div class="card-btn">
           <button class="like-btn"><i class="fa fa-thumbs-o-up"></i>좋아요</button>
-          <button class="like-btn"><i class="fa fa-thumbs-o-down"></i>싫어요</button>
+          <button class="hate-btn"><i class="fa fa-thumbs-o-down"></i>싫어요</button>
           <button class="comment-btn"><i class="fa fa-commenting-o"></i>24</button>
         </div>
         <ul class="comment-list">
           <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!<span class="comment-author"> - 작성자</span></p>
+            <div class="comment-menu">
+              <button class="like-btn"><i class="fa fa-thumbs-o-up"></i>좋아요</button>
+              <button class="hate-btn"><i class="fa fa-thumbs-o-down"></i>싫어요</button>
+            </div>
           </li>
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="insert-comment">
-            <textarea class="comment-text-area"></textarea>
-            <button class="insert-comment-btn">댓글 등록</button>
-          </li>
-        </ul>
-      </li>
-      <li class="card">
-        <img class="user-img" src="http://placeimg.com/100/100/people" alt="people">
-        <div class="wrapper">
-          <div class="author">작성자</div>
-          <div class="title">제목</div>
-          <div class="write-date">2021-07-12 / 12:42</div>
-          <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint a inventore distinctio vel excepturi magnam eveniet recusandae suscipit nobis, dolor ipsum modi quos soluta.</p>
-        </div>
-        <div class="card-btn">
-          <button class="like-btn"><i class="fa fa-thumbs-o-up"></i>좋아요</button>
-          <button class="like-btn"><i class="fa fa-thumbs-o-down"></i>싫어요</button>
-          <button class="comment-btn"><i class="fa fa-commenting-o"></i>24</button>
-        </div>
-        <ul class="comment-list">
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="insert-comment">
-            <textarea class="comment-text-area"></textarea>
-            <button class="insert-comment-btn">댓글 등록</button>
-          </li>
-        </ul>
-      </li>
-      <li class="card">
-        <img class="user-img" src="http://placeimg.com/100/100/people" alt="people">
-        <div class="wrapper">
-          <div class="author">작성자</div>
-          <div class="title">제목</div>
-          <div class="write-date">2021-07-12 / 12:42</div>
-          <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint a inventore distinctio vel excepturi magnam eveniet recusandae suscipit nobis, dolor ipsum modi quos soluta.</p>
-        </div>
-        <div class="card-btn">
-          <button class="like-btn"><i class="fa fa-thumbs-o-up"></i>좋아요</button>
-          <button class="like-btn"><i class="fa fa-thumbs-o-down"></i>싫어요</button>
-          <button class="comment-btn"><i class="fa fa-commenting-o"></i>24</button>
-        </div>
-        <ul class="comment-list">
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="insert-comment">
-            <textarea class="comment-text-area"></textarea>
-            <button class="insert-comment-btn">댓글 등록</button>
-          </li>
-        </ul>
-      </li>
-      <li class="card">
-        <img class="user-img" src="http://placeimg.com/100/100/people" alt="people">
-        <div class="wrapper">
-          <div class="author">작성자</div>
-          <div class="title">제목</div>
-          <div class="write-date">2021-07-12 / 12:42</div>
-          <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint a inventore distinctio vel excepturi magnam eveniet recusandae suscipit nobis, dolor ipsum modi quos soluta.</p>
-        </div>
-        <div class="card-btn">
-          <button class="like-btn"><i class="fa fa-thumbs-o-up"></i>좋아요</button>
-          <button class="like-btn"><i class="fa fa-thumbs-o-down"></i>싫어요</button>
-          <button class="comment-btn"><i class="fa fa-commenting-o"></i>24</button>
-        </div>
-        <ul class="comment-list">
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="comment">
-            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsum!</p>
-            <span class="comment-author">작성자</span>
-          </li>
-          <li class="insert-comment">
-            <textarea class="comment-text-area"></textarea>
-            <button class="insert-comment-btn">댓글 등록</button>
+          <li class="insert-box">
+            <form class="insert-comment" action="">
+              <textarea class="comment-text-area"></textarea>
+              <div class="btn-check-wrap">
+                <label for="comment-anonymity">익명 </label>
+                <input id="comment-anonymity" type="checkbox">
+              </div>
+              <button class="insert-comment-btn">댓글 등록</button>
+            </form>
           </li>
         </ul>
       </li>

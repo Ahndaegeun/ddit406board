@@ -5,7 +5,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, rgba(68,158,224,1) 0%, rgba(0,212,255,1) 100%);
 }
 
 .body__container {
@@ -14,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 10px 7px 20px rgba(0, 78, 94, 0.801);
+  box-shadow: 10px 7px 20px #999;
 }
 
 .main-banner {
