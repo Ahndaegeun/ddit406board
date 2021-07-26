@@ -7,8 +7,9 @@ i {
 .body__container {
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
   background: #fff;
+  position: relative;
 }
 
 .user-info {
@@ -317,4 +318,47 @@ main {
   padding: 16px 10px;
   border-radius: 5px;
   grid-area: btn;
+}
+
+.mobile-device-menu {
+  display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .size1024 {
+    display: none;
+  }
+
+  .body__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .board-list {
+    height: 88vh;
+  }
+
+  .mobile-device-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .mobile-device-menu > * {
+    padding: 10px 0;
+    width: 100%;
+  }
+  
+  .clicked {
+    background: #999;
+    color: #fff;
+  }
 }
